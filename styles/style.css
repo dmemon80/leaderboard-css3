@@ -1,3 +1,184 @@
-h1 {
-    background-color: aqua;
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Common Use*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 870px;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.section-title {
+    color: #562EFF;
+    font-size: 24px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.player-name-text {
+    font-size: 18px;
+    margin-left: 16px;
+}
+
+
+/* Top Blogs Start */
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.blog {
+    display: flex;
+}
+
+.blog-text {
+    margin-left: 16px;
+}
+
+.thumbnail img {
+    width: 177px;
+    height: 117px;
+}
+
+.thumbnail-text {
+    font-size: 20px;
+}
+
+.author-text {
+    color: #9F9F9F;
+}
+
+.author-text a {
+    text-decoration: none;
+    color: #562EFF;
+}
+
+
+/*--------------------- 
+Latest Courses Start
+*/
+
+.latest-courses {
+    display: flex;
+}
+
+.courses img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-title {
+    font-size: 20px;
+}
+
+.course-author {
+    font-size: 15px;
+    color: #ED6B4F;
+}
+
+.filled {
+    color: #FFC014;
+}
+
+.empty {
+    color: #AEAEAE;
+}
+
+.rating-div span {
+    font-size: 14px;
+    color: #A2A2A2;
+}
+
+.fa-clock {
+    color: #FF4A60;
+}
+
+.rating-div span:nth-child(1) {
+    color: green;
+}
+
+
+/* ------------
+Media Query Start
+ ---------------*/
+
+
+/*--------------
+  Mobile Device
+  ---------------*/
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+    .players,
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player,
+    .blog,
+    .latest-courses {
+        flex-direction: column;
+    }
+    .blog {
+        align-items: center;
+    }
+    .blog-text {
+        text-align: center;
+    }
+    .section-title {
+        color: #562EFF;
+        font-size: 24px;
+        text-align: center;
+    }
+    .courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .course-detail {
+        text-align: center;
+    }
+}
+
+
+/*-------------- 
+iPad Device
+ --------------*/
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
